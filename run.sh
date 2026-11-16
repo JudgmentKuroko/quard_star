@@ -7,4 +7,5 @@ SHELL_FOLDER=$(cd "$(dirname "$0")"; pwd)
     -m 1G \
     -smp 8 \
     -nographic \
-    --parallel none
+    --parallel none \
+    -drive "if=pflash,bus=0,unit=0,format=raw,file=$SHELL_FOLDER/output/lowlevelboot/fw.bin"
